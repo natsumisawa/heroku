@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :user
   resources :event
   resources :reserve
+
+  root to: "event#show"
 end

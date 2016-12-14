@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :events
-  belongs_to :reserve
+  has_many :reserves, througth: :reserves
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

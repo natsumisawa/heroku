@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
   has_many :users
-  belongs_to :reserve
+  has_many :reserves, througth: :reserves
 end

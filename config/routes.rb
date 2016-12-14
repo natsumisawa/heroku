@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  event   'events/new' => 'events#new'
+  get   '/'  => 'top#index'
+  get   'events'     => 'events#new'
+  get   'events/new' => 'events#new'
+  post  'events'     => 'events#create'
 
-  root to: "event#show"
 end

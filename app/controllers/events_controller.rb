@@ -5,6 +5,11 @@ class EventsController < ApplicationController
     @events = Event.all.order("id DESC")
   end
 
+  def show
+    @event = Event.find(params[:id])
+    # @reserves = @event.reserves.includes(:user)
+  end
+
   def new
   end
 

@@ -5,6 +5,7 @@
     <%= event.title %>
     <%= event.time %>
     <%= event.place %>
-    <%= event.detail %><br>
+    <%= event.detail %>
+    <%= link_to "詳細をみる", "/events/#{event.id}" %><br>
   <% end %>
 </div>
